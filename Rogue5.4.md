@@ -6,6 +6,7 @@
 /stopattack
 /targetenemy
 /focus [@mouseover]
+/focus target
 /script SetCVar("targetNearestDistance", 41)
 /cast [nostealth,nocombat]!潜行;[@mouseover,nohelp,exists][]闷棍
 ```
