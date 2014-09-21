@@ -21,6 +21,7 @@
 
 # 使用技能
 -  /cast <spell> 施放技能
+-  /cast [option] <spell> 当满足条件时使用技能
 -  /stopcasting 取消目前正在施法中的技能
 -  /castrandom <spell1>, <spell2>, <spell3>... 随机使用列表中的其中一个技能
 
