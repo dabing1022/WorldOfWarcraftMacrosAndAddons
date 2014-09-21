@@ -1,3 +1,15 @@
+### 闷棍宏
+
+1.
+
+```js
+/stopattack
+/targetenemy
+/focus [@mouseover]
+/script SetCVar("targetNearestDistance", 41)
+/cast [nostealth,nocombat]!潜行;[@mouseover,nohelp,exists][]闷棍
+```
+
 ### 潜伏帷幕(按之下马，潜行，潜伏帷幕，连续按不会破潜)
 
 ```js
@@ -58,6 +70,14 @@
 /cast [nocombat] 潜行;凿击
 ```
 
+ShortCutKey:Q Alt+Q
+```js 
+#showtooltips 
+/cast [nocombat] 潜行;
+/cast [target=focus,harm,exists,modifier:alt][combat] 凿击;
+/cast [target=mouseover, harm, exists][combat] 凿击; 凿击
+```
+
 ### 焦点宏
 
 下为焦点目标和当前目标对调宏
@@ -91,3 +111,20 @@
 ```
 
 此宏的意思是，如果你3秒钟不按此宏，则3秒后重置此宏；如果你一直连按，则不重置；适用于经常连打两个佯攻的误操作玩家。
+
+### 打断宏
+
+```js
+#脚踢宏#
+/cast [target=focus,harm,exists,modifier:alt]脚踢;
+/cast [target=mouseover, harm, exists]脚踢; 脚踢
+/cast 致命投掷(天赋)
+```
+
+### 速度爆发
+
+```js
+#showtooltip 速度爆发
+/cast 速度爆发
+/cast 侦测
+```
