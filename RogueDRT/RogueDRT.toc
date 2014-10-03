@@ -1,0 +1,8 @@
+﻿## Interface: 40100
+
+## Title: Rogues' Decimal Reduction Time
+## Notes-zhCN: 盗贼递减监视
+## Author: 飒岚
+## Version: 1.0.0
+
+RogueDRT.lua
