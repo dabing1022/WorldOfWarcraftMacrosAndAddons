@@ -14,12 +14,20 @@ addon.spellDB = {
 
 
 	-- stuns
+	"118905",	-- 静电充能
+	"77505",	-- 地震术
 	"107570",	-- Storm Bolt 风暴之锤
-	"115752",	-- Glyph of Blinding Light
+	"105421",	-- 盲目之光
+	"115752",	-- 盲目之光	
+	"119072",	-- 神圣愤怒
+	"31935",	-- 复仇者之盾
 	"119381",	-- Leg Sweep 扫堂腿
 	"119392",	-- Charging Ox Wave 蛮牛冲
-	"122242",	-- Clash (1st debuff on wowhead)
-	"126451",	-- Clash (2nd debuff on wowhead)
+	"122242",	-- Clash (1st debuff on wowhead) 对冲
+	"126451",	-- Clash (2nd debuff on wowhead) 对冲2
+	"128844",   -- 对冲
+	"128845",   -- 对冲
+	"128846",   -- 对冲
 	"108194",	-- Asphyxiate 窒息
 	"102795",	-- Bear Hug 熊抱
 	"24394",	-- Intimidation 胁迫
@@ -30,7 +38,9 @@ addon.spellDB = {
 	"46968", 	-- Shockwave 震荡波
 	"853", 		-- Hammer of Justice 制裁之锤
 	"105593",	-- Fist of Justice 制裁之拳
-	"49203", 	-- Hungering Cold
+	"53570", 	-- Hungering Cold 饥饿之寒
+	"61058", 	-- Hungering Cold 饥饿之寒
+	"79092", 	-- Hungering Cold 饥饿之寒	
 	"85388", 	-- Throwdown
 	"44572", 	-- Deep Freeze 深度冻结
 	"5211",	 	-- Mighty Bash 蛮力猛击
@@ -48,18 +58,23 @@ addon.spellDB = {
 	"88625",	-- Holy Word: Chastise  圣言术：罚 
 	"90337",	-- Bad Manner (monkey stun) 粗鲁投掷
 	"65929",	-- Charge Stun 冲锋昏迷
+	"7922", 	-- 战神	
+	"105771", 	-- 冲锋	
 	"20253", 	-- Intercept 
 	"91797", 	-- Monstrous Blow (Gnaw with DT) 蛮兽打击
+	"115001", 	-- 冷酷严冬	
 	   
 	--cc
+	"115268",	-- 迷惑
 	"107566",	-- Staggering Shout 错愕怒吼
 	"114404",	-- Void Tendrils 虚空触须之握
-	"113792",	-- Psychic Terror
+	"113792",	-- Psychic Terror 心灵恐惧
 	"105421",	-- Blinding Light 盲目之光
+	"115752",	-- 盲目之光	
 	"115078",	-- Paralysis 分筋错骨
 	"116706",	-- Disable (2x) 金刚震
 	"91807", 	-- Shambling Rush (Leap with DT) 蹒跚冲锋
-	"87100",	-- Sin and Punishment
+	"87100",	-- Sin and Punishment 罪与罚
 	"1513", 	-- Scare Beast 恐吓野兽
 	"2637",		-- Hibernate 休眠
 	"605", 		-- Mind Control 统御意志
@@ -67,6 +82,11 @@ addon.spellDB = {
 	"2094", 	-- Blind 致盲
 	"118", 		-- Polymorph 变形术
 	"51514", 	-- Hex 妖术
+	"61305", 	-- 变形术: 黑猫
+	"28272", 	-- 变形术: 猪
+	"61721", 	-- 变形术: 兔子
+	"61780", 	-- 变形术: 火鸡
+	"28271", 	-- 变形术: 乌龟	
 	"6789", 	-- Death Coil 死亡缠绕
 	"5246", 	-- Intimidating Shout 破胆怒吼
 	"8122",		-- Psychic Scream 心灵尖啸
@@ -78,6 +98,12 @@ addon.spellDB = {
 	"20066",	-- Repentance 忏悔
 	"339", 		-- Entangling Roots 纠缠根须
 	"64803",	-- Entrapment 诱捕
+	"122",		-- 冰霜新星	
+	"33395",	-- 冰冻术	
+	"111340",	-- 寒冰结界	
+	"63685",	-- 冰霜之力
+	"118345",	-- 粉碎
+	"104045",	-- 催眠术	
 	"102359",	-- Mass Entanglement 群体缠绕
 	"45334",	-- Wild Charge 无法移动
 	"128405",	-- Narrow Escape 险境求生
@@ -90,6 +116,14 @@ addon.spellDB = {
 	"23694", 	-- Improved Hamstring
 	"76780", 	-- Bind Elemental 束缚元素
 	"19387", 	-- Entrapment 诱捕
+	"9484", 	-- 束缚亡灵
+	"30217", 	-- 精金手雷
+	"67769", 	-- 钴质破片炸弹
+	"30216", 	-- 魔铁炸弹
+	"39965", 	-- 冰霜手雷
+	"55536", 	-- 霜纹投网
+	"13099", 	-- 撒网器
+	"107079", 	-- 震山掌	
 	
 	-- cc immune
 	"49039",	-- Lichborne 巫妖之躯
@@ -100,6 +134,7 @@ addon.spellDB = {
 	"51271",	-- Pillar of Frost 冰霜之柱
 	"96267",	-- Glyph of Inner Focus 心灵专注
 	"31821", 	-- Aura Mastery 虔诚光环
+	"104773", 	-- 不灭决心	
 	
 	-- dmg reductions 伤害减免
 	"110913",	-- Dark Bagrain 黑暗交易
@@ -125,7 +160,8 @@ addon.spellDB = {
 	"47788",	-- Guardian Spirit 守护之魂
    
 	-- silences
-	"116709",	-- Spear Hand Strike
+	"116705",	-- Spear Hand Strike 切喉手
+	"173320",	-- Spear Hand Strike 切喉手	
 	"78675",	-- Solar Beam 日光术
 	"58357",	-- Glyph of Gag Order 禁令雕文
 	"47476", 	-- Strangulate 绞袭
@@ -135,9 +171,10 @@ addon.spellDB = {
 	"19647", 	-- Spell Lock 法术封锁
 	"34490", 	-- Silencing Shot 沉默射击
 	"28730", 	-- Arcane Torrent 奥术洪流
+	"31117", 	-- 痛苦无常	
 	
 	-- disarms
-	"64058",	-- Psychic Horror (disarm part)
+	"64058",	-- Psychic Horror (disarm part) 心灵惊骇
 	"117368",	-- Grapple Weapon 探云鞭
 	"77606",	-- Dark Simulacrum - "Magic Disarm" ;-) 黑暗模拟
 	"676", 		-- Disarm 缴械
@@ -162,14 +199,28 @@ addon.spellDB = {
 	"6940", 	-- Hand of Sacrifice 牺牲之手
 	"89488", 	-- Strength of Soul 灵魂之力
 	"23920", 	-- Spell Reflection (warrior) 法术反射
+	"114028", 	-- 群体反射	
 	"68992", 	-- Darkflight (Worgen racial) 疾步夜行
 	"31642", 	-- Blazing Speed
 	"54428", 	-- Divine Plea 神圣恳求
 	"2983", 	-- Sprint 疾跑
 	"1850", 	-- Dash 急奔
 	"29166", 	-- Innervate 激活
+	"114239", 	-- 幻隐	
 	"77761",	-- Stampeding Roar (bear) 狂奔怒吼
 	"77764",	-- Stampeding Roar (cat) 狂奔怒吼
 	"106898",	-- Glyph of Stampeding Roar 狂奔怒吼
 	"118922",	-- Posthaste 猎人：迅疾如风
+	"104773", 	-- 不灭决心	
+	"113860", 	-- 黑暗灵魂：哀难
+	"113858", 	-- 黑暗灵魂：易爆
+	"113861", 	-- 黑暗灵魂：学识	
+	"108416", 	-- 牺牲契约	
+	"90361", 	-- 灵魂治愈	
+	"12043", 	-- 气定神闲	
+	"115760", 	-- 寒冰屏障雕文	
+	"19574", 	-- 狂野怒火	
+	"18499", 	-- 狂暴之怒	
+	"69369", 	-- 掠食者的迅捷	
+	"45182", 	-- 装死	
 }
