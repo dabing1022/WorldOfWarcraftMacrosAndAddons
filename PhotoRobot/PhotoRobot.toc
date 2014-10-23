@@ -2,7 +2,7 @@
 ## Notes: Shows Buff/Debuffs instead of portraits
 ## Version: 0.3.5
 ## Author: OUGHT
-## Interface: 50001
+## Interface: 60000
 ## SavedVariablesPerCharacter: PhotoRobotDB
 localization.lua
 PR_spells.lua
