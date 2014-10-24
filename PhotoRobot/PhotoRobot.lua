@@ -521,14 +521,14 @@ function addon.ListAuras(unit)
 
 	--[[for i = 1, #auras do	
 		print(auras[i].name)
-	end	]]
+	end ]]
 
 	return auras
 end
 
 -- Checks trackable and adds new auras
 function addon.CheckAuras(unit)
-	--print("check aura " .. unit)
+	-- print("check aura " .. unit)
 	local auras = {}
 	local auCheck = addon.ListAuras(unit)
 
@@ -536,8 +536,9 @@ function addon.CheckAuras(unit)
 		local spell = GetSpellInfo(spellID)
 		if (spell ~= nil) then
 			--print("checking aura " .. spellID .. " on " .. unit)
-			for i = 1, #auCheck do						
-				if (auCheck[i].spellId == spellID) then
+			for i = 1, #auCheck do
+				if (auCheck[i].spellId == tonumber(spellID)) then
+					-- print(auCheck[i].spellId .. "-------" .. auCheck[i].name)
 					--print((tTime - GetTime()) .. " sec")
 					table.insert(auras, 
 					{	
