@@ -51,8 +51,7 @@ addon.spellDB = {
 	"89605", 	-- Aura of Foreboding
 	"89766", 	-- Axe Toss 巨斧投掷
 	"22570", 	-- Maim 割碎
-	"9005", 	-- Pounce 突袭
-	"102546",	-- Pounce (non-stealth) 突袭
+	"163505",   -- 斜掠
 	"47481",	-- Gnaw 撕扯
 	"1776", 	-- Gouge 凿击
 	"6770",		-- Sap 闷棍
