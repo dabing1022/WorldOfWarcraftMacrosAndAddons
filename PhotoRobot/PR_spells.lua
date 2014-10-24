@@ -196,7 +196,6 @@ addon.spellDB = {
 	"58357",	-- Glyph of Gag Order 禁令雕文
 	"47476", 	-- 【绞袭】暗影触须勒紧敌人的脖子，使他们沉默5秒。还可中断非玩家类敌人的法术施放，持续3秒。
 	"1330", 	-- Garrote - Silence 锁喉 - 沉默
-	"703", 	    -- Garrote - Silence 锁喉 - 沉默
 	"55021", 	-- Silenced - Improved Counterspell
 	"15487", 	-- Silence (priest) 牧师：沉默
 	"19647", 	-- Spell Lock 法术封锁
