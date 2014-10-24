@@ -1,6 +1,6 @@
 ## Title: PhotoRobot
 ## Notes: Shows Buff/Debuffs instead of portraits
-## Version: 0.3.5
+## Version: 0.4.0
 ## Author: OUGHT
 ## Interface: 60000
 ## SavedVariablesPerCharacter: PhotoRobotDB

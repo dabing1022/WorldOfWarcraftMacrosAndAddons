@@ -1,7 +1,8 @@
--- PhotoRobot v0.3.5
+-- PhotoRobot v0.4.0
 -- Buff/Debuff monitor for default and custom unitframes
 -- Written by OUGHT
 -- Based on PortraitTimers by Killakhan
+-- Maintained by ChildhoodAndy 国服 埃德萨拉 影舞剑馨
 
 local addonName, addon = ...
 addon.version = "0.3.5"
