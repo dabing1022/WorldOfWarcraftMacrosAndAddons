@@ -497,22 +497,24 @@ function addon.ListAuras(unit)
 	i = 1
 	repeat
 		--print(unit .. ' ' .. i)
-		local name, _, texture, _, _, _, eTime = UnitBuff(unit, i)							
+		local name, _, texture, _, _, _, eTime, _, _, _, spellId = UnitBuff(unit, i)							
 		if (name ~= nil) then
 			table.insert(auras, {	["name"] = name, 
 									["texture"] = texture, 
-									["eTime"] = eTime - GetTime()})
+									["eTime"] = eTime - GetTime(),
+									["spellId"] = spellId})
 		end
 		i = i+1
 	until (name == nil)
 
 	i = 1
 	repeat
-		local name, _, texture, _, _, _, eTime = UnitDebuff(unit, i)							
+		local name, _, texture, _, _, _, eTime, _, _, _, spellId = UnitDebuff(unit, i)							
 		if (name ~= nil) then
 			table.insert(auras, {	["name"] = name, 
 									["texture"] = texture, 
-									["eTime"] = eTime - GetTime()})
+									["eTime"] = eTime - GetTime(),
+									["spellId"] = spellId})
 		end
 		i = i+1
 	until (name == nil)
@@ -535,13 +537,14 @@ function addon.CheckAuras(unit)
 		if (spell ~= nil) then
 			--print("checking aura " .. spellID .. " on " .. unit)
 			for i = 1, #auCheck do						
-				if (auCheck[i].name == spell) then
+				if (auCheck[i].spellId == spellID) then
 					--print((tTime - GetTime()) .. " sec")
 					table.insert(auras, 
 					{	
 						["spell"] = auCheck[i].name, 
 						["texture"] = auCheck[i].texture, 
 						["eTime"] = auCheck[i].eTime,
+						["spellId"] = auCheck[i].spellId,
 					})
 					--print("Adding in auras " .. spellID)
 				end
@@ -559,7 +562,7 @@ function addon.CheckAuras(unit)
 			flag = false
 			if (#frame.auras > 0) then
 				for j, fau in  ipairs(frame.auras) do
-					if (au.spell == fau.spell) then 
+					if (au.spellId == fau.spellId) then 
 						flag = true 
 					end
 				end
@@ -567,7 +570,7 @@ function addon.CheckAuras(unit)
 			if not flag then
 				--print("Found aura " .. au.spell .. " on " .. unit .. ", expires in " .. au.eTime .. " seconds.")
 				--if not au.unit then print("Unit is NIL!!! Galactics in danger!!!") end
-				addon.SetAura(unit, au.spell, au.texture, au.eTime)
+				addon.SetAura(unit, au.spell, au.texture, au.eTime, au.spellId)
 			end
 		end
 	else
@@ -581,7 +584,7 @@ function addon.UpdateAura(auCheck, aura)
 	local flag = false
 	--print(#auCheck)
 	for i = 1, #auCheck do	
-		if (flag ~= true) and (auCheck[i].name == aura.spell) then
+		if (flag ~= true) and (auCheck[i].spellId == aura.spellId) then
 			res = auCheck[i].eTime
 			flag = true
 			--print("Updated aura " .. auCheck[i].name .. ", expires in " .. res .. " seconds.")
@@ -649,7 +652,7 @@ end
 
 
 
-function addon.SetAura(unit, spell, texture, eTime)
+function addon.SetAura(unit, spell, texture, eTime, spellId)
 	local frame = addon.GetUnitFrame(unit)
 	if not frame then return end
 	if not frame.auraIcon then return end
@@ -670,6 +673,7 @@ function addon.SetAura(unit, spell, texture, eTime)
 	frame.auras[i].spell = spell;
 	frame.auras[i].texture = texture
 	frame.auras[i].time = eTime
+	frame.auras[i].spellId = spellId
 	frame.name = unit
 	--print("Adding " .. spell .. " to auras at " .. i .. " position \n Sorting...");
 	table.sort(frame.auras, addon.CompareSpells)
