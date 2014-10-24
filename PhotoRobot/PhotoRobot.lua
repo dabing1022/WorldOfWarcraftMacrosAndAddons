@@ -5,7 +5,7 @@
 -- Maintained by ChildhoodAndy 国服 埃德萨拉 影舞剑馨
 
 local addonName, addon = ...
-addon.version = "0.3.5"
+addon.version = "0.4.0"
 local L = addon
 
 local defaults = {
