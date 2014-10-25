@@ -31,6 +31,10 @@ addon.fontsDB = {
 
 addon.f = CreateFrame("Frame", addonName.."mainFrame", UIParent)
 
+addon.untrackedSpellId = {
+	"1822", "24331", "24332", "27556", "27638", "36332", "53499", "54668", "59881", "65406", "120560", "125099", "130191", "147396", "150017", "155722",
+}
+
 -- main update frames
 addon.TargetFrame = CreateFrame("Frame", addonName.."_TargetFrame", UIParent)
 local tFrame = addon.TargetFrame
@@ -537,7 +541,7 @@ function addon.CheckAuras(unit)
 		if (spell ~= nil) then
 			--print("checking aura " .. spellID .. " on " .. unit)
 			for i = 1, #auCheck do
-				if (auCheck[i].spellId == tonumber(spellID)) then
+				if (auCheck[i].name == spell and not addon.checkIsUntrackedSpell(auCheck[i].spellId)) then 
 					-- print(auCheck[i].spellId .. "-------" .. auCheck[i].name)
 					--print((tTime - GetTime()) .. " sec")
 					table.insert(auras, 
@@ -563,7 +567,7 @@ function addon.CheckAuras(unit)
 			flag = false
 			if (#frame.auras > 0) then
 				for j, fau in  ipairs(frame.auras) do
-					if (au.spellId == fau.spellId) then 
+					if (au.spell == fau.spell) then 
 						flag = true 
 					end
 				end
@@ -819,4 +823,13 @@ function addon.myColorCallback(restore)
 	addon.testFont:SetTextColor(addon.db.r, addon.db.g, addon.db.b, addon.db.a)
 	addon.testFont2:SetTextColor(addon.db.r, addon.db.g, addon.db.b, addon.db.a)
 	addon.arenaTextureFrame.font:SetTextColor(addon.db.r, addon.db.g, addon.db.b, addon.db.a)
+end
+
+function addon.checkIsUntrackedSpell(spellId)
+	for i, untrackSpellId in ipairs(addon.untrackedSpellId) do
+		if spellId == tonumber(untrackSpellId) then
+			return true
+		end
+	end
+	return false
 end
