@@ -22,7 +22,7 @@ function addon.CreateConfig()
 	----------------------------------
 	
 	addon.submenu1 = CreateFrame("Frame", addonName.."submenu1", addon.panel)
-	addon.submenu1.name = "Display"
+	addon.submenu1.name = L["Display"]
 	addon.submenu1.parent = addon.panel.name
 	InterfaceOptions_AddCategory(addon.submenu1)
 	local p1 = addon.submenu1
@@ -234,7 +234,7 @@ function addon.CreateConfig()
 	-- panel 2 start
 	----------------------------------
 	addon.submenu2 = CreateFrame("Frame", addonName.."submenu2", addon.panel)
-	addon.submenu2.name = "Frames"
+	addon.submenu2.name = L["Frames"]
 	addon.submenu2.parent = addon.panel.name
 	InterfaceOptions_AddCategory(addon.submenu2)
 	local p2 = addon.submenu2
