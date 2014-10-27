@@ -566,7 +566,7 @@ function addon.CheckAuras(unit)
 		local frame = addon.GetUnitFrame(unit)
 		for i, au in ipairs(auras) do
 			flag = false
-			if (#frame.auras > 0) then
+			if (frame.auras ~= nil) and (#frame.auras > 0) then
 				for j, fau in  ipairs(frame.auras) do
 					if (au.spell == fau.spell) then 
 						flag = true 
