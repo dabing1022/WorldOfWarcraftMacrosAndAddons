@@ -6,7 +6,7 @@
 
 local addonName, addon = ...
 addon.version = "0.4.1"
-addon.feedbackInfo = "欢迎使用，更多信息和错误反馈请见【NGA 暗影裂口】http://nga.178.com/read.php?tid=7470642 "
+addon.feedbackInfo = "欢迎使用PhotoRobot，更多信息和错误反馈请见【NGA 暗影裂口】http://nga.178.com/read.php?tid=7470642 "
 local L = addon
 
 local defaults = {
@@ -235,7 +235,7 @@ function addon:UNIT_AURA(event, unit)
 			if addon.XPerl_loaded or addon.SUF_loaded then
 				addon.CheckAuras(unit)
 			else
-				if (unit == "party1" and (PartyMemberFrame1:IsVisible())) or
+				if  (unit == "party1" and (PartyMemberFrame1:IsVisible())) or
 					(unit == "party2" and (PartyMemberFrame2:IsVisible())) or
 					(unit == "party3" and (PartyMemberFrame3:IsVisible())) or
 					(unit == "party4" and (PartyMemberFrame4:IsVisible())) then
@@ -288,7 +288,8 @@ end
 
 function addon:ADDON_LOADED(event, addon)
 	if addon == "PhotoRobot" then
-		DEFAULT_CHAT_FRAME:AddMessage("|c00FF9900[PR]: |rPhotoRobot v"..self.version.." 已经加载!"..addon.feedbackInfo)
+		DEFAULT_CHAT_FRAME:AddMessage("|c00FF9900[PR]: |rPhotoRobot v"..self.version.." 加载完毕!")
+		DEFAULT_CHAT_FRAME:AddMessage("|c00FF9900[PR]: |r"..self.feedbackInfo)
 
 		if not PhotoRobotDB then
 			PhotoRobotDB = {}
