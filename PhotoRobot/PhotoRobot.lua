@@ -1,11 +1,12 @@
--- PhotoRobot v0.4.0
+-- PhotoRobot v0.4.1
 -- Buff/Debuff monitor for default and custom unitframes
 -- Written by OUGHT
 -- Based on PortraitTimers by Killakhan
 -- Maintained by ChildhoodAndy 国服 埃德萨拉 影舞剑馨
 
 local addonName, addon = ...
-addon.version = "0.4.0"
+addon.version = "0.4.1"
+addon.feedbackInfo = "欢迎使用，更多信息和错误反馈请见【NGA 暗影裂口】http://nga.178.com/read.php?tid=7470642 "
 local L = addon
 
 local defaults = {
@@ -287,7 +288,7 @@ end
 
 function addon:ADDON_LOADED(event, addon)
 	if addon == "PhotoRobot" then
-		DEFAULT_CHAT_FRAME:AddMessage("|c00FF9900[PR]: |rPhotoRobot v"..self.version.." Loaded")
+		DEFAULT_CHAT_FRAME:AddMessage("|c00FF9900[PR]: |rPhotoRobot v"..self.version.." 已经加载!"..addon.feedbackInfo)
 
 		if not PhotoRobotDB then
 			PhotoRobotDB = {}
