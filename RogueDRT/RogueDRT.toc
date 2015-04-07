@@ -1,4 +1,4 @@
-﻿## Interface: 40100
+﻿## Interface: 60100
 
 ## Title: Rogues' Decimal Reduction Time
 ## Notes-zhCN: 盗贼递减监视
